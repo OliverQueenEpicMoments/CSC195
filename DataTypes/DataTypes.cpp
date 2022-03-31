@@ -39,6 +39,7 @@ int main() {
 		cin >> HoursWorkedPerday[I];
 		Totalhours = Totalhours + HoursWorkedPerday[I];
 	}
+
 	cout << Name << " worked " << Totalhours << " hours at $" << Wage << " an hour." << endl;
 	int Gross = Totalhours * Wage;
 	cout << "Gross income: $" << Gross << endl;
