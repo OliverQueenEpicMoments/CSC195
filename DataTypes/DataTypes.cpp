@@ -4,12 +4,12 @@ using namespace std;
 int main() {
 	string Name;
 	char Initial;
-	short Age;
+	unsigned short Age;
 	bool IsAdult;
-	int ZipCode;
+	unsigned int ZipCode;
 	float Wage;
-	short DaysWorked;
-	short HoursWorkedPerday[7];
+	unsigned short DaysWorked;
+	unsigned short HoursWorkedPerday[7];
 
 	const float Tax = 0.1f;
 
@@ -41,8 +41,8 @@ int main() {
 	}
 
 	cout << Name << " worked " << Totalhours << " hours at $" << Wage << " an hour." << endl;
-	int Gross = Totalhours * Wage;
+	float Gross = Totalhours * Wage;
 	cout << "Gross income: $" << Gross << endl;
-	int Net = Gross - (Gross * Tax);
+	float Net = Gross - (Gross * Tax);
 	cout << "Net income: $" << Net << endl;
 }
