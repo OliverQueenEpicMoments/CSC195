@@ -4,16 +4,27 @@ using namespace std;
 void OhNo(int Size) {
 	char* Block = new char[10000];
 	cout << Size << endl;
+	delete[] Block;
 	OhNo(Size + 10000);
 }
 
 int main() {
-	OhNo(10000);
-		
+	//OhNo(10000);
+	bool B = true; // Bool value (1-byte)
 	int I = 67;
-	bool B = true;
+	int J = 90;
+	int* PI = &I; // <- Address (4-bytes)
+	*PI = 75;
+	PI = &J;
+	*PI = 54;
 
+	cout << sizeof(PI) << endl;
 	cout << &I << endl;
+	cout << PI << endl;
+	cout << *PI << endl;
+	cout << I << endl;
+	cout << J << endl;
+		
 	cout << &B << endl;
 
 	int* P = new int(10);

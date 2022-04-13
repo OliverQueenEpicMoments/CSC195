@@ -1,18 +1,21 @@
 #include "Employee.h"
+#include <vector>
 #include <iostream>
 using namespace std;
 
 int main() {
-	Employee Employees[5];
+	vector<Employee> employees;
 	short NumEmployees;
 	cout << "Number of employees: ";
 	cin >> NumEmployees;
 
 	for (int I = 0; I < NumEmployees; I++) {
-		Employees[I].Read();
+		Employee employee;
+		employee.Read();
+		employees.push_back(employee);
 	}
 
 	for (int I = 0; I < NumEmployees; I++) {
-		Employees[I].Write();
+		employees[I].Write();
 	}
 };
