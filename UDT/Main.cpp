@@ -4,18 +4,24 @@
 using namespace std;
 
 int main() {
-	vector<Employee> employees;
+	vector<Employee*> employees;
 	short NumEmployees;
 	cout << "Number of employees: ";
 	cin >> NumEmployees;
 
 	for (int I = 0; I < NumEmployees; I++) {
-		Employee employee;
-		employee.Read();
+		Employee* employee = new Employee();
+		employee->Read();
 		employees.push_back(employee);
 	}
 
 	for (int I = 0; I < NumEmployees; I++) {
-		employees[I].Write();
+		employees[I]->Write();
 	}
+
+	for (auto employee : employees) {
+		delete employee;
+	}
+
+	employees.clear();
 };
