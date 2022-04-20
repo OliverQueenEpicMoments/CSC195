@@ -44,5 +44,4 @@ int main() {
 
 	delete P;
 	delete[] Po;
-
 }
